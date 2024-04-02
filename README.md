@@ -64,3 +64,9 @@ rules: {
     "rules": {
     }
 ```
+
+
+# 오늘의 오류 
+`yarn create react-app ./` 을 할때
+`bash: yarn: command-not-found`가 뜨면
+`npm install -g yarn`을 입력
