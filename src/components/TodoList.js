@@ -1,14 +1,18 @@
 import TodoListItem from "./TodoListItem";
 import "../styles/TodoList.scss";
+import TodoInsert from "./TodoInsert";
 
-const TodoList = () => {
+const TodoList = ({ todos, onRemove, onToggle }) => {
   return (
     <div className="TodoList">
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
+      {todos.map(todo => (
+        <TodoListItem
+          key={todo.id}
+          todo={todo}
+          onRemove={onRemove}
+          onToggle={onToggle}
+        />
+      ))}
     </div>
   );
 };
